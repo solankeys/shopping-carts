@@ -1,16 +1,19 @@
 
 import './App.css';
-import HomePage from './Pages/Home-Page';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import {Routes} from 'react-router-dom'
+import HomePage from './Pages/Home/Home-Page';
+import {Route, Routes } from 'react-router-dom';
+import MyCart from './Pages/MyCart/MyCart';
+import Login from './Pages/Login/Login';
 
 function App() {
+  
   return (
     <div className="App">
-      {/* <Routes>
-          <Route path="/" exact={true} component={HomePage} />
-          </Routes> */}
-      <HomePage />
+     <Routes >
+        <Route path="/" exact={true} element={<HomePage />} />
+        <Route path="/mycart" element={<MyCart />} />
+        <Route path="/login" element={ <Login />} />
+       </Routes>
     </div>
   );
 }

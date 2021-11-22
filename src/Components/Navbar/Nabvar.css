@@ -8,27 +8,15 @@ a{
 .navbar{
     background: #ee6e73;
     height: 10vh;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0,0, 0.2);
 }
-/* .nav-wrapper{
-    display: grid;
-    grid-template-areas: "top","middle","bottom";
-    grid-template-rows: 1rem 2fr 1rem;
-
-} */
-/* .top{
-    grid-area: top;
-} */
 .navbar-container{
     display: grid;
-    /* grid-area: middle; */
     grid-template-columns: 6em 2fr 3fr 3fr 6em ;
     align-items: center;
     margin-bottom: auto;
     padding: 10px 0;
 }
-/* .bottom{
-    grid-area: bottom;
-} */
 .brand-logo{
     grid-column: 2/3;
     text-align: right;
@@ -49,5 +37,14 @@ a{
     .brand-logo{
         grid-column: 3/4;
         text-align: left;
+    }
+}
+@media screen and (min-width:1200px) {
+    .brand-logo{
+        text-align: center;
+    }
+    .navbar-ul{
+        justify-content: center;
+        text-align: center;
     }
 }
